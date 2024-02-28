@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice-Cream</title>
+    <link rel="icon" type="image" href="img/Smile.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+   
+    <style>
+        *{margin:0; padding:0;}
+        html{scroll-behavior: smooth;}
+        .button{ position:fixed; bottom:0.5in; right:0.5in; width:1cm; height:1.5cm; line-height:0.5cm; font-size:xx-large; background-color:lightgreen;color:white; border:none; border-radius:20px;}
+        /* ------------------------------------------------------------------------------------------- */
+        #header{width:100%; height:1in; background-color:deeppink;}
+        .header-top{height:50%; width:100%;}
+        .header-bottom{height:50%; width:100%;}
+        .header-left{float:left;}
+        .header-left ul li {display:inline-block; padding:20px 0 0 1cm;}
+        .header-left ul li a{display:inline-block; text-decoration:none; color:white; font-size:larger;}
+        .header-right{float:right;}
+        .header-right ul li {display:inline-block; padding:20px 1cm 0 0;}
+        .header-right ul li a{text-decoration:none; color:white; font-size:larger;}
+        /* ------------------------------------------------------------------------------------------- */
+        nav{ height:0.9in; width:91%; text-align:center; padding:0 0 0.2cm 0; margin-left:0.5in; word-spacing:1cm; background-color:white;  border-radius:50px; position:absolute; top:0.6in;}
+        nav a{text-decoration:none; color:black; display: inline-block; line-height:0.9in; font-size:x-large; padding:0;}
+        /* ------------------------------------------ssss------------------------------------------------- */
+        .first-div{background-image:url(img/carousel-1.jpg); background-size:cover; display: flex; background-repeat:no-repeat; width:100%; height:120vh;}
+        .first-div-mater{ height:5in; width:100%; text-align:center; position:relative; top:2in; color:white;}
+        .first-div-mater h1{ font-size:90px;}
+        .first-div-mater button{ height:1.8cm; width:1.8in; font-size:25px; line-height:1.8cm; background-color:rgb(242, 108, 130); color:white; border:none; border-radius:40px;}
+        /* ------------------------------------------------------------------------------------------- */
+        .second-div{ height:auto; width:100%; margin-top:1.5in; text-align:center;}
+        .second-up{ height:25vh; width:100%;}
+        .second-up hr { width:3cm;background-color:skyblue; height:0.5px; margin:auto; border:3px solid pink;}
+        .second-up h1 {font-size:40px;}
+        .second-down{ width:92%; height:80vh; margin:auto; text-align:left;}
+        .second-down p{ font-size:larger;}
+        .second-left{ width:32%; height:100%; float:left; padding-left:2%;}
+        .second-left button { width:1.4in; height:0.6in; background-color:skyblue; color:white; border:none; border-radius:40px;}
+        .second-center{ width:32%; height:100%; float:left;}
+        .second-center img{ border-radius:20px;}
+        .second-right{ width:32%; height:100%; margin-left:67%; padding-left:2%;}
+        .second-right ul li{ opacity:0.6; list-style-image:url('../8666665_check_icon.png');}
+        .second-right button { width:1.4in; height:0.6in; background-color:rgb(235, 85, 165); color:white; border:none; border-radius:40px;}
+        
+        /* ------------------------------------------------------------------------------------------- */
+        .third-div{ height:85vh; width:100%; margin-top:1.5in;}
+        .third-left{ height:100%; width:50%; float:left; background-image:url('img/promotion.jpg'); background-size: cover; background-repeat:no-repeat; display:flex;}
+        .third-left button{ width:1.5in; height:1.5in; font-size:70px; background-color:transparent; color:white; line-height:100%; margin:auto; border:none;  }
+        .third-right{ height:100%; width:50%; margin-left:50%; background-color:rgb(243, 151, 166); color:white;  text-align:center;}
+        .third-right .span{ height:3cm; width:3cm; line-height:3cm; background-color:white; color:skyblue; font-size:x-large; border-radius:50%; margin:auto; }
+        .third-right p{ font-size: large;}
+        .third-right button { width:1.4in; height:0.6in; background-color:skyblue; color:white; border:none; border-radius:40px;}
+        /* ------------------------------------------------------------------------------------------- */
+        .fourth-div{ height:100vh; width:90%; background-color:rgb(204, 245, 245); margin:auto; margin-top: 1.5in;}
+        .fourth-div hr { width:3cm; background-color:skyblue; height:0.5px; border:3px solid pink;}
+        .fourth-div h1{ font-size:40px;}
+
+        .four-in{ height:3in; width:100%; text-align:center; margin-top:1.8in;}
+        .four-in .first{ height:3in; width:29%; float:left; margin-left:3%; background-color:white;}
+        .four-in .last{ height:3in; width:29%; margin-left:68%; background-color:white;}
+
+        /* ------------------------------------------------------------------------------------------- */
+        .fifth-div{ height:auto; width:100%; margin-top:1in;}
+        .fifth-up{ height:33vh; width:100%; text-align:center;}
+        .fifth-up hr { width:3cm;background-color:skyblue; height:0.5px; margin:auto; border:3px solid pink;}
+        .fifth-up h1 {font-size:40px;}
+        .fifth-down{ height:100vh; width:100%;}
+        /* ----------------------------- */
+        .fifth-down .first{height:3in; width:33.9%; background-image:url(img/portfolio-1.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .second{height:3in; width:33.9%; background-image:url(img/portfolio-2.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .third{height:3in; width:33.9%; background-image:url(img/portfolio-3.jpg); margin-left:auto; background-repeat:no-repeat; background-size: cover;}
+        .fifth-down .fourth{height:3in; width:33.9%; background-image:url(img/portfolio-4.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .fifth{height:3in; width:33.9%; background-image:url(img/portfolio-5.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .sixth{height:3in; width:33.9%; background-image:url(img/portfolio-6.jpg); margin-left:auto; background-repeat:no-repeat; background-size: cover;}
+        /* ------------------------------------------------------------------------------------------- */
+        .sixth-div{ height:92vh; width:100%; margin-top:1in; }
+        .six-o {  height:auto; width:90%; margin:auto;}
+        .six-o hr { width:3cm; background-color:skyblue; height:0.5px; border:3px solid pink;}
+        .six-o h1{ font-size:40px;}
+        .six-in{ height:4in; width:90%; text-align:center; margin:auto;}
+        .six-in .first{ height:4in; width:24%; margin-left:1%; float:left; background-color: burlywood;}
+        .six-in .last{ height:4in; width:24%; margin-left:76%; background-color: burlywood;}
+        .tag{ height:1.5cm; width:2cm; background-color:pink; color:white; margin:auto;}
+        .six-in button{ height:1.2cm; width:1.3in; font-size:15px; line-height:1.2cm; background-color:skyblue; color:white; border:none; border-radius:40px;}
+        /* ------------------------------------------------------------------------------------------- */
+        .seventh-div{ height:100vh; width:90%; margin:auto; margin-top: 1.5in;}
+        .seventh-div hr { width:3cm; background-color:skyblue; height:0.5px; border:3px solid pink;}
+        .seventh-div h1{ font-size:40px;}
+
+        .seven-in{ height:3in; width:100%; text-align:center; margin-top:1.8in;}
+        .seven-in .first{ height:3in; width:29%; float:left; margin-left:3%; background-color:gold;}
+        .seven-in .last{ height:3in; width:29%; margin-left:68%; background-color: gold;}
+        .seven-in ul li{display:inline-block; border:2px solid skyblue; border-radius:50%; color:skyblue; width:1cm; height:1cm;line-height:1cm;}
+        /* ------------------------------------------------------------------------------------------- */
+        .eighth-div{  height:80vh; width:100%; text-align:center; margin-top:1in;}
+        .eighth-div hr { width:3cm;background-color:skyblue; height:0.5px; margin:auto; border:3px solid pink;}
+        .eighth-div h1 {font-size:40px;}
+        .eighth-div p{ font-size:x-large;}
+        /* ------------------------------------------------------------------------------------------- */
+        footer{ height:50vh; width:100%; text-align:center; margin-top:1in;}
+        footer h1{font-size:50px; color:deeppink;}
+        footer ul li{display:inline-block; border:2px solid skyblue; border-radius:50%; color:skyblue; width:1cm; height:1cm;line-height:1cm;}
+        footer ul li a{text-decoration:none; color:skyblue;}
+        .footer-left{ height:1.1in; width:46%; text-align:right; float:left; padding:0 2%; margin:0.5cm 0; border-right:solid  gainsboro;}
+        .footer-right{ height:1.1in; width:47%; text-align:left; float:right; padding:0 1%; margin:0.5cm 0;}
+        footer a{ text-decoration:none; color:deeppink;}
+        /* ------------------------------------------------------------------------------------------- */
+    </style>
+</head>
+<body>
+    <button class="button" onclick="window.location.href='https://w3docs.com';">^<br>^</button>
+    <header id="header">
+        <div class="header-top">
+            <div class="header-left">
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Support</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <ul>
+                    <li><a href=""><i class="zmdi zmdi-facebook"></i></a></li>
+                    <li><a href=""><i class="zmdi zmdi-twitter-box"></i></a></li>
+                    <li><a href=""><i class="zmdi zmdi-linkedin"></i></a></li>
+                    <li><a href=""><i class="zmdi zmdi-instagram"></i></a></li>
+                    <li><a href=""><i class="zmdi zmdi-youtube-play"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-top"></div>
+        <!-- --------------------------------- -->
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Product</a>
+            <a href=""><font color="skyblue" size="30px">i</font><font color="pink" size="20px">CREAM</font></a>
+            <a href="">Service</a>
+            <a href="">Gallery</a>
+            <a href="">Contect</a>
+        </nav>
+    </header>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="first-div">
+        <div class="first-div-mater">
+            <h2>TRADITIONAL & DELICIOUS</h2>
+            <br>
+            <h1>Traditional Ice Cream <br> Since 1950</h1>
+            <br>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <div class="second-div">
+        <div class="second-up">
+            <hr>
+            <h1><b>Traditional & Delicious Ice <br> Cream Since 1950</b></h1></div>
+        <div class="second-down">
+            <div class="second-left">
+                <br><br>
+                <h1>About Us</h1>
+                <br>
+                <p>
+                    Eos kasd eos dolor vero vero, 
+                    <br> lorem stet diam rebum. Ipsum 
+                    <br> amet sed vero dolor sea
+                </p>
+                <br>
+                <p>
+                    Takimata sed vero vero no sit sed, justo 
+                    <br> clita duo no duo amet et, nonumy kasd sed 
+                    <br> dolor eos diam lorem eirmod. Amet sit 
+                    <br> amet amet no. Est nonumy sed labore 
+                    <br> eirmod sit magna. Erat at est justo sit ut.
+                    <br> Labor diam sed ipsum et eirmod
+                </p>
+                <br>
+                <button>Learn More</button>
+            </div>
+            <!-- ------------------------------- -->
+            <div class="second-center">
+                <img src="img/about.jpg" width="100%" height="100%">
+            </div>
+            <!-- -------------------------------- -->
+            <div class="second-right">
+                <br><br>
+                <h1>Our Features</h1>
+                <br>
+                <p>
+                    Invidunt lorem justo sanctus clita. Erat 
+                    <br> lorem labore ea, justo dolor lorem ipsum ut 
+                    <br> sed eos, ipsum et dolor kasd sit ea justo. 
+                    <br> Erat justo sed sed diam. Ea et erat ut sed 
+                    <br> diam sea ipsum est dolor
+                </p>
+                <br>
+                <ul>
+                    <li><h2>Eos kasd eos dolor</h2></li><br>
+                    <li><h2>Eos kasd eos dolor</h2></li><br>
+                    <li><h2>Eos kasd eos dolor</h2></li><br>
+                </ul>
+                <br>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------------------------------------------------------------- -->
+    <div class="third-div">
+        <div class="third-left">
+            <button class="btn btn-default btn-lg"><i class="zmdi zmdi-rotate-right zmdi-hc-spin"></i></button>
+            <img src="">
+        </div>
+        <div class="third-right">
+            <br><br><br>
+            <div class="span">$119</div>
+            <br>
+            <h1>Chocolate Ice Cream</h1>
+            <br>
+            <p>
+                Lorem justo clita dolor ipsum ut sed eos, ipsum et dolor kasd sit 
+                <br> ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea 
+                <br> ipsum
+            </p>
+            <br><br>
+            <button><h3>Order Now</h3></button>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="fourth-div">
+        <hr>
+        <br>
+        <h1>Best Services We Provide <br> For Our Clients</h1>
+        <div class="four-in">
+            <div class="first">
+                <img src="img/service-1.jpg" height="130px" style="border:15px solid pink; border-radius:50%; position:relative; bottom:28%;">
+                <div style="height:auto; position:relative; bottom:1.5cm;">
+                    <h2>Individual Approach</h2>
+                    <br>
+                    <p>
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        <br>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                        <br>cccccccccccccccccccccc
+                    </p>
+                    <br>
+                    <a href="" style="color:skyblue;"> Learn More</a>
+                </div>
+            </div>
+            <div class="first">
+                <img src="img/service-2.jpg" height="130px" style="border:15px solid pink; border-radius:50%; position:relative; bottom:28%;">
+                <div style="height:auto; position:relative; bottom:1.5cm;">
+                    <h2>Individual Approach</h2>
+                    <br>
+                    <p>
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        <br>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                        <br>cccccccccccccccccccccc
+                    </p>
+                    <br>
+                    <a href="" style="color:skyblue;"> Learn More</a>
+                </div>
+            </div>
+            <div class="last">
+                <img src="img/service-3.jpg" height="130px" style="border:15px solid pink; border-radius:50%; position:relative; bottom:28%;">
+                <div style="height:auto; position:relative; bottom:1.5cm;">
+                    <h2>Individual Approach</h2>
+                    <br>
+                    <p>
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        <br>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                        <br>cccccccccccccccccccccc
+                    </p>
+                    <br>
+                    <a href="" style="color:skyblue;"> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="fifth-div">
+        <div class="fifth-up">
+            <hr>
+            <h1><b>
+                Delicious Ice Cream <br> Made From Our Very <br> Own Organic Milk
+            </b></h1>
+        </div>
+        <div class="fifth-down">
+            <div class="first">
+
+            </div>
+            <div class="second"></div>
+            <div class="third"></div>
+            <div class="fourth"></div>
+            <div class="fifth"></div>
+            <div class="sixth"></div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="sixth-div">
+        <div class="six-o">
+            <hr>
+            <br>
+            <h1>Best Prices We Offer For <br> Ice Cream Lovers</h1>
+        </div>
+        <br><br>
+        <div class="six-in">
+            <div class="first">
+                <div class="tag"> <br><h2>$99</h2></div>
+                <img src="img/product-1.jpg" style="border:15px solid pink; border-radius:50%; position:relative; bottom:8px;">
+                <br>
+                <h2>Vanilla Ice Cream</h2>
+                <br>
+                <button>Order Now</button>
+            </div>
+            <div class="first">
+                <div class="tag"> <br><h2>$99</h2></div>
+                <img src="img/product-2.jpg" style="border:15px solid pink; border-radius:50%; position:relative; bottom:8px;">
+                <br>
+                <h2>Vanilla Ice Cream</h2>
+                <br>
+                <button>Order Now</button>
+            </div>
+            <div class="first">
+                <div class="tag"> <br><h2>$99</h2></div>
+                <img src="img/product-3.jpg" style="border:15px solid pink; border-radius:50%; position:relative; bottom:8px;">
+                <br>
+                <h2>Vanilla Ice Cream</h2>
+                <br>
+                <button>Order Now</button>
+            </div>
+            <div class="last">
+                <div class="tag"> <br><h2>$99</h2></div>
+                <img src="img/product-4.jpg" style="border:15px solid pink; border-radius:50%; position:relative; bottom:8px;">
+                <br>
+                <h2>Vanilla Ice Cream</h2>
+                <br>
+                <button>Order Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="seventh-div">
+        <hr>
+        <br>
+        <h1>Experienced & Most <br> Famous Ice Cream Chefs</h1>
+        <div class="seven-in">
+            <div class="first">
+                <img src="img/team-1.jpg" height="130px" style="border:15px solid pink; border-radius:50%; position:relative; bottom:28%;">
+                <div style="height:auto; position:relative; bottom:1.5cm;">
+                    <h2>Full Name</h2>
+                    <br>
+                    <i>DESIGNATION</i>
+                    <br><br>
+                    <ul>
+                        <li><i class="zmdi zmdi-twitter-box"></i></li>
+                        <li><i class="zmdi zmdi-facebook"></i></li>
+                        <li><i class="zmdi zmdi-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="first">
+                <img src="img/team-2.jpg" height="130px" style="border:15px solid pink; border-radius:50%; position:relative; bottom:28%;">
+                <div style="height:auto; position:relative; bottom:1.5cm;">
+                    <h2>Full Name</h2>
+                    <br>
+                    <i>DESIGNATION</i>
+                    <br><br>
+                    <ul>
+                        <li><i class="zmdi zmdi-twitter-box"></i></li>
+                        <li><i class="zmdi zmdi-facebook"></i></li>
+                        <li><i class="zmdi zmdi-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="last">
+                <img src="img/team-3.jpg" height="130px" style="border:15px solid pink; border-radius:50%; position:relative; bottom:28%;">
+                <div style="height:auto; position:relative; bottom:1.5cm;">
+                    <h2>Full Name</h2>
+                    <br>
+                    <i>DESIGNATION</i>
+                    <br><br>
+                    <ul>
+                        <li><i class="zmdi zmdi-twitter-box"></i></li>
+                        <li><i class="zmdi zmdi-facebook"></i></li>
+                        <li><i class="zmdi zmdi-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="eighth-div">
+        <hr>
+        <h1>Clients Say About Our <br> Famous Ice Cream</h1>
+        <br>
+        <img src="img/Quat.JPG" height="70px" width="70px" style=border-radius:30px;>
+        <br><br>
+        <p>
+            Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. 
+            <br> Rebum elitr dolore et eos labore, stet justo sed est sed. Diam 
+            <br> sed sed dolor stet amet eirmod eos labore diam
+        </p>
+        <br><br>
+        <img src="img/testimonial-3.jpg" style=border-radius:50%;>
+        <br>
+        <h2>Clint Name</h2>
+        <h4><i>Profection</i></h4>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <footer>
+        <h1> <font color="skyblue">i</font>CREAM</h1>
+        <ul>
+            <li><a href=""><i class="zmdi zmdi-twitter-box"></i></a></li>
+            <li><a href=""><i class="zmdi zmdi-facebook"></i></a></li>
+            <li><a href=""><i class="zmdi zmdi-linkedin"></i></a></li>
+            <li><a href=""><i class="zmdi zmdi-instagram"></i></a></li>
+        </ul>
+        <div class="footer-left">
+            <h4>Get In Touch</h4>
+            <br>
+            <p>123 Street, New York, USA</p>
+            <br>
+            <p>+012 345 67890</p>
+        </div>
+        <div class="footer-right">
+            <h4>Opening Hours</h4>
+            <br>
+            <p>Mon - Sat, 8AM - 5PM</p>
+            <br>
+            <p>Sunday: Closed</p>
+        </div>
+        <p>©<a href="">Domain</a>. All Rights Reserved. Designed by <a href="">HTML Codex</a></p>
+    </footer>
+</body>
+</html>
