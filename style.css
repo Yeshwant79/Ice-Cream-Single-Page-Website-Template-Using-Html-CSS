@@ -1,1 +1,98 @@
+        *{margin:0; padding:0;}
+        html{scroll-behavior: smooth;}
+        .button{ position:fixed; bottom:0.5in; right:0.5in; width:1cm; height:1.5cm; line-height:0.5cm; font-size:xx-large; background-color:lightgreen;color:white; border:none; border-radius:20px;}
+        /* ------------------------------------------------------------------------------------------- */
+        #header{width:100%; height:1in; background-color:deeppink;}
+        .header-top{height:50%; width:100%;}
+        .header-bottom{height:50%; width:100%;}
+        .header-left{float:left;}
+        .header-left ul li {display:inline-block; padding:20px 0 0 1cm;}
+        .header-left ul li a{display:inline-block; text-decoration:none; color:white; font-size:larger;}
+        .header-right{float:right;}
+        .header-right ul li {display:inline-block; padding:20px 1cm 0 0;}
+        .header-right ul li a{text-decoration:none; color:white; font-size:larger;}
+        /* ------------------------------------------------------------------------------------------- */
+        nav{ height:0.9in; width:91%; text-align:center; padding:0 0 0.2cm 0; margin-left:0.5in; word-spacing:1cm; background-color:white;  border-radius:50px; position:absolute; top:0.6in;}
+        nav a{text-decoration:none; color:black; display: inline-block; line-height:0.9in; font-size:x-large; padding:0;}
+        /* ------------------------------------------ssss------------------------------------------------- */
+        .first-div{background-image:url(img/carousel-1.jpg); background-size:cover; display: flex; background-repeat:no-repeat; width:100%; height:120vh;}
+        .first-div-mater{ height:5in; width:100%; text-align:center; position:relative; top:2in; color:white;}
+        .first-div-mater h1{ font-size:90px;}
+        .first-div-mater button{ height:1.8cm; width:1.8in; font-size:25px; line-height:1.8cm; background-color:rgb(242, 108, 130); color:white; border:none; border-radius:40px;}
+        /* ------------------------------------------------------------------------------------------- */
+        .second-div{ height:auto; width:100%; margin-top:1.5in; text-align:center;}
+        .second-up{ height:25vh; width:100%;}
+        .second-up hr { width:3cm;background-color:skyblue; height:0.5px; margin:auto; border:3px solid pink;}
+        .second-up h1 {font-size:40px;}
+        .second-down{ width:92%; height:80vh; margin:auto; text-align:left;}
+        .second-down p{ font-size:larger;}
+        .second-left{ width:32%; height:100%; float:left; padding-left:2%;}
+        .second-left button { width:1.4in; height:0.6in; background-color:skyblue; color:white; border:none; border-radius:40px;}
+        .second-center{ width:32%; height:100%; float:left;}
+        .second-center img{ border-radius:20px;}
+        .second-right{ width:32%; height:100%; margin-left:67%; padding-left:2%;}
+        .second-right ul li{ opacity:0.6; list-style-image:url('../8666665_check_icon.png');}
+        .second-right button { width:1.4in; height:0.6in; background-color:rgb(235, 85, 165); color:white; border:none; border-radius:40px;}
+        
+        /* ------------------------------------------------------------------------------------------- */
+        .third-div{ height:85vh; width:100%; margin-top:1.5in;}
+        .third-left{ height:100%; width:50%; float:left; background-image:url('img/promotion.jpg'); background-size: cover; background-repeat:no-repeat; display:flex;}
+        .third-left button{ width:1.5in; height:1.5in; font-size:70px; background-color:transparent; color:white; line-height:100%; margin:auto; border:none;  }
+        .third-right{ height:100%; width:50%; margin-left:50%; background-color:rgb(243, 151, 166); color:white;  text-align:center;}
+        .third-right .span{ height:3cm; width:3cm; line-height:3cm; background-color:white; color:skyblue; font-size:x-large; border-radius:50%; margin:auto; }
+        .third-right p{ font-size: large;}
+        .third-right button { width:1.4in; height:0.6in; background-color:skyblue; color:white; border:none; border-radius:40px;}
+        /* ------------------------------------------------------------------------------------------- */
+        .fourth-div{ height:100vh; width:90%; background-color:rgb(204, 245, 245); margin:auto; margin-top: 1.5in;}
+        .fourth-div hr { width:3cm; background-color:skyblue; height:0.5px; border:3px solid pink;}
+        .fourth-div h1{ font-size:40px;}
 
+        .four-in{ height:3in; width:100%; text-align:center; margin-top:1.8in;}
+        .four-in .first{ height:3in; width:29%; float:left; margin-left:3%; background-color:white;}
+        .four-in .last{ height:3in; width:29%; margin-left:68%; background-color:white;}
+
+        /* ------------------------------------------------------------------------------------------- */
+        .fifth-div{ height:auto; width:100%; margin-top:1in;}
+        .fifth-up{ height:33vh; width:100%; text-align:center;}
+        .fifth-up hr { width:3cm;background-color:skyblue; height:0.5px; margin:auto; border:3px solid pink;}
+        .fifth-up h1 {font-size:40px;}
+        .fifth-down{ height:100vh; width:100%;}
+        /* ----------------------------- */
+        .fifth-down .first{height:3in; width:33.9%; background-image:url(img/portfolio-1.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .second{height:3in; width:33.9%; background-image:url(img/portfolio-2.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .third{height:3in; width:33.9%; background-image:url(img/portfolio-3.jpg); margin-left:auto; background-repeat:no-repeat; background-size: cover;}
+        .fifth-down .fourth{height:3in; width:33.9%; background-image:url(img/portfolio-4.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .fifth{height:3in; width:33.9%; background-image:url(img/portfolio-5.jpg); float:left; background-repeat:no-repeat; background-size:cover;}
+        .fifth-down .sixth{height:3in; width:33.9%; background-image:url(img/portfolio-6.jpg); margin-left:auto; background-repeat:no-repeat; background-size: cover;}
+        /* ------------------------------------------------------------------------------------------- */
+        .sixth-div{ height:92vh; width:100%; margin-top:1in; }
+        .six-o {  height:auto; width:90%; margin:auto;}
+        .six-o hr { width:3cm; background-color:skyblue; height:0.5px; border:3px solid pink;}
+        .six-o h1{ font-size:40px;}
+        .six-in{ height:4in; width:90%; text-align:center; margin:auto;}
+        .six-in .first{ height:4in; width:24%; margin-left:1%; float:left; background-color: burlywood;}
+        .six-in .last{ height:4in; width:24%; margin-left:76%; background-color: burlywood;}
+        .tag{ height:1.5cm; width:2cm; background-color:pink; color:white; margin:auto;}
+        .six-in button{ height:1.2cm; width:1.3in; font-size:15px; line-height:1.2cm; background-color:skyblue; color:white; border:none; border-radius:40px;}
+        /* ------------------------------------------------------------------------------------------- */
+        .seventh-div{ height:100vh; width:90%; margin:auto; margin-top: 1.5in;}
+        .seventh-div hr { width:3cm; background-color:skyblue; height:0.5px; border:3px solid pink;}
+        .seventh-div h1{ font-size:40px;}
+
+        .seven-in{ height:3in; width:100%; text-align:center; margin-top:1.8in;}
+        .seven-in .first{ height:3in; width:29%; float:left; margin-left:3%; background-color:gold;}
+        .seven-in .last{ height:3in; width:29%; margin-left:68%; background-color: gold;}
+        .seven-in ul li{display:inline-block; border:2px solid skyblue; border-radius:50%; color:skyblue; width:1cm; height:1cm;line-height:1cm;}
+        /* ------------------------------------------------------------------------------------------- */
+        .eighth-div{  height:80vh; width:100%; text-align:center; margin-top:1in;}
+        .eighth-div hr { width:3cm;background-color:skyblue; height:0.5px; margin:auto; border:3px solid pink;}
+        .eighth-div h1 {font-size:40px;}
+        .eighth-div p{ font-size:x-large;}
+        /* ------------------------------------------------------------------------------------------- */
+        footer{ height:50vh; width:100%; text-align:center; margin-top:1in;}
+        footer h1{font-size:50px; color:deeppink;}
+        footer ul li{display:inline-block; border:2px solid skyblue; border-radius:50%; color:skyblue; width:1cm; height:1cm;line-height:1cm;}
+        footer ul li a{text-decoration:none; color:skyblue;}
+        .footer-left{ height:1.1in; width:46%; text-align:right; float:left; padding:0 2%; margin:0.5cm 0; border-right:solid  gainsboro;}
+        .footer-right{ height:1.1in; width:47%; text-align:left; float:right; padding:0 1%; margin:0.5cm 0;}
+        footer a{ text-decoration:none; color:deeppink;}
